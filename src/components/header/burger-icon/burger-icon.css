@@ -1,0 +1,5 @@
+.icon-burger {
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+}

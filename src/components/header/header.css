@@ -1,0 +1,21 @@
+.header {
+    width: 100%;
+    background-color: #f7bb08;
+}
+
+.header__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0px;
+    gap: 15px;
+}
+
+.logo-block {
+    max-width:  40px;
+}
+
+.logo {
+    max-width: 100%;
+}
+

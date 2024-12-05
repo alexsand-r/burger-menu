@@ -1,6 +1,5 @@
 import './nav-bar.css'
-import { useState } from 'react'
-
+import { NavLink } from 'react-router-dom';
 
 
 function Navbar({isVisibleNavbar}) {
@@ -10,12 +9,12 @@ function Navbar({isVisibleNavbar}) {
     return (
         <>
             <nav className="navig">
-                <ul className={`list ${isVisibleNavbar ? 'activ' : ''}`}>
-                    <li><a className="link" href="">home</a></li>
-                    <li><a className="link" href="">product</a></li>
-                    <li><a className="link" href="">about as</a></li>
-                    <li><a className="link" href="">contact</a></li>
-                </ul>
+                <ul className={`list ${isVisibleNavbar ? 'activ-bar' : ''}`}>
+                    <li><NavLink to="/" className='link'>home</NavLink></li>
+                    <li><NavLink to="/products" className='link'>product</NavLink></li> 
+                    <li><NavLink to="/about" className='link'>о нас</NavLink></li> 
+                    <li><NavLink to="/contact" className='link'>Contact</NavLink></li>
+                 </ul>
             </nav>
         </>
     )

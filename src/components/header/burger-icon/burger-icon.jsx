@@ -1,5 +1,6 @@
 import './burger-icon.css'
 import { RxHamburgerMenu } from "react-icons/rx";
+import { IoMdClose } from "react-icons/io"; // Иконка крестика
 import { useState, useEffect } from 'react'
 
 
@@ -7,7 +8,9 @@ import { useState, useEffect } from 'react'
 
 
 function Burger({toggleNavbar}) {
-        const [isVisibleBurger, setIsVisibleBurger] = useState(false);//  состояние для иконки бургера
+    const [isVisibleBurger, setIsVisibleBurger] = useState(false);//  состояние для иконки бургера
+    const [isNavbarOpen, setIsNavbarOpen] = useState(false); // Состояние для управления меню
+
     const checkScreenWidth = () => {
         if (window.innerWidth < 460) {
             setIsVisibleBurger(true)
@@ -30,10 +33,23 @@ function Burger({toggleNavbar}) {
         };
     }, []);
 
+       // Обработчик клика на иконку
+    const handleIconClick = () => {
+        setIsNavbarOpen((prev) => !prev); // Переключение состояния меню
+        toggleNavbar(); // Вызываем функцию для управления меню
+    };
 
     return (
         <>
-            {isVisibleBurger && <RxHamburgerMenu className="icon-burger" onClick={toggleNavbar} />}
+             {isVisibleBurger && (
+                <>
+                    {isNavbarOpen ? (
+                        <IoMdClose className="icon-close" onClick={handleIconClick} />
+                    ) : (
+                        <RxHamburgerMenu className="icon-burger" onClick={handleIconClick} />
+                    )}
+                </>
+            )}
         </>
     )
 }

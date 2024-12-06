@@ -1,8 +1,10 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Overview
+This project is built using React with Vite as the development environment. It includes the implementation of:
 
-Currently, two official plugins are available:
+A menu component for navigation.
+A mobile menu designed with responsiveness in mind.
+Additionally, the project utilizes React Router for seamless navigation between different pages.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Feel free to adjust or expand based on your specific project details!
